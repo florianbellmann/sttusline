@@ -13,7 +13,7 @@ Filename.set_colors {
 Filename.set_update(function()
 	local has_devicons, devicons = pcall(require, "nvim-web-devicons")
 
-	local filename = fn.expand("%:t")
+	local filename = fn.expand("%")
 	if filename == "" then filename = "No File" end
 	local icon, color_icon = nil, nil
 	if has_devicons then
